@@ -54,7 +54,7 @@ const start = async () => {
         console.log("Current dictionaries: " + [...dictionaries.keys()])
 
         const port = process.env.PORT || 3333
-        const address = process.env.LISTEN_ADDRESS || ""
+        const address = process.env.LISTEN_ADDRESS || "0.0.0.0"
 
         await fastify.listen(port, address)
     } catch (err) {
